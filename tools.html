@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>FRechdoc</title>
+
+        <link rel="stylesheet" href="langdoc.github.io/FRechdoc/css/bootstrap.min.css">
+        <link rel="stylesheet" href="langdoc.github.io/FRechdoc/css/font-awesome.min.css">
+        <link rel="stylesheet" href="langdoc.github.io/FRechdoc/css/highlight.dark.css">
+        <link rel="stylesheet" href="langdoc.github.io/FRechdoc/css/main.css">
+    </head>
+    <body>
+
+        <header class="navbar navbar-default navbar-fixed-top">
+
+            <a class="navbar-brand" href="langdoc.github.io/FRechdoc/">
+                FRechdoc
+                <small class="hidden-xs hidden-sm">
+                    technical documentation for language documentation
+                </small>
+            </a>
+
+            
+        </header>
+
+        <main class="container">
+            <div class="row">
+
+                
+                <section id="content" class="col-sm-12">
+                    <h3 id="tools">Tools</h3>
+<h4 id="elan">ELAN</h4>
+<p>Used in transcriptions, see the <a href="/elan.html">documentation</a>.</p>
+<h4 id="lamus-2">LAMUS 2</h4>
+<p>We have been testing this and it seems to be very usable.</p>
+<h4 id="ocricola--tesseract">OCRicola / Tesseract</h4>
+<p>Used in OCR tasks.</p>
+<h4 id="bib2bib">bib2bib</h4>
+<p>Note: Google around for some links. This tool can be used to extract a portion of a bibliography into a new bibtex file. This can be convenient, for example, in order to share a subset of a large bibliography with someone. Or the main bibliography can contain some problems which make different tools choke into it, but the small subset one needs for whatever smaller use can still be perfectly formatted. Of course all changes have to be done to the main bibliography, but this subset can be recreated just before whatever work in hand is compiled.</p>
+<h5 id="use">use</h5>
+<ul>
+<li>Niko uses this for all kind of random stuff he does.</li>
+<li>Could be useful to subset the bibliography containing entries for sessions. For example, someone uses a subset of the corpus for study X, and for that purpose one needs to be able to refer into those sessions within the selection, not the the whole thing.</li>
+</ul>
+<h5 id="example-of-use">example of use</h5>
+<pre><code>#!/bin/bash 
+bib2bib -oc /Users/me/language_shift-citations -ob /Users/me/language_shift.bib -c 'keywords : "language shift" or
+keywords : "language death" or
+keywords : "endangered languages" or
+keywords : "language revitalization" or
+keywords : "language maintenance"' bibliography.bib</code></pre>
+<p>The syntax is bit strange, but first file it creates is just list of all keys taken (probably can be somehow omitted). Then one points to the bibliography that should be created. Then one lists what is used to filter. That's it!</p>
+<h4 id="hunalign--sentence-aligner">hunalign – sentence aligner</h4>
+<p><a href="http://mokk.bme.hu/en/resources/hunalign/">http://mokk.bme.hu/en/resources/hunalign/</a></p>
+<p>A tool for automatically matching sentence pairs in translated texts.</p>
+<h6 id="use-1">use</h6>
+<ul>
+<li>Aligning Eric Vászolyi's transcriptions and translations</li>
+<li>Aligning Eliel Lagercrantz’ transcriptions and translations (sje and sms)</li>
+</ul>
+                </section>
+
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p class="text-muted">
+                    website generated with <a href="http://couscous.io" title="Markdown website generator">Couscous</a>
+                </p>
+            </div>
+        </footer>
+
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="//yastatic.net/highlightjs/8.2/highlight.min.js"></script>
+
+        <script>
+            $(function() {
+                $("section>h1").wrap('<div class="page-header" />');
+                // Syntax highlighting
+                hljs.initHighlightingOnLoad();
+            });
+        </script>
+
+    </body>
+</html>
