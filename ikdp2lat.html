@@ -30,16 +30,17 @@
 
                 
                 <section id="content" class="col-sm-12">
-                    <p></br></p>
+                    <p>ikdp2lat is a small R package which performs following tasks:</p>
 <ul>
-<li>Our <a href="https://langdoc.github.io/FRechdoc/elan.html">ELAN</a> template.</li>
-<li>The <a href="https://langdoc.github.io/FRechdoc/tools.html">tools</a> we are using.</li>
-<li>Our <a href="https://langdoc.github.io/ceonventions.html">transcription conventions</a>.</li>
+<li>Transforming metadata from FileMaker Pro to CMDI</li>
+<li>Performing general validations for the data</li>
+<li>Preparing ZIP files to be uploaded to LAT</li>
 </ul>
-<h5 id="r-packages-developed-in-freiburg">R packages developed in Freiburg</h5>
+<p>The basic motivation behind this packages is the idea that in order to add a session into TLA archive the only parameter one would truly need to specify is the session name. If the metadata and files are arranged correctly, the program will be able to resolve without assistance which files belong where.</p>
+<p>The current implementation is very idiosynchronic to Iźva Komi Documentation Project, and as it is mainly an internal tool, no special effort has been done to make it more widely compatible. However, there are several distinct functions there which probably could be easily adjusted to different uses. At least these are:</p>
 <ul>
-<li><a href="https://langdoc.github.io/FRechdoc/FRelan.html">FRelan</a> for parsing ELAN files to R</li>
-<li><a href="https://langdoc.github.io/FRechdoc/ikdp2lat.html">ikdp2lat</a> for managing IKDP metadata and preparing sessions for LAT import)</li>
+<li>Database connection from R to FileMaker Pro</li>
+<li>CMDI generation from R data frames</li>
 </ul>
                 </section>
 
